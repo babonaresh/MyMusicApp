@@ -191,6 +191,10 @@
     <Compile Include="Migrations\202003111652393_ovverridegigsandgenreconvention.Designer.cs">
       <DependentUpon>202003111652393_ovverridegigsandgenreconvention.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003111659172_populategenreTable.cs" />
+    <Compile Include="Migrations\202003111659172_populategenreTable.Designer.cs">
+      <DependentUpon>202003111659172_populategenreTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -283,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003111652393_ovverridegigsandgenreconvention.resx">
       <DependentUpon>202003111652393_ovverridegigsandgenreconvention.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003111659172_populategenreTable.resx">
+      <DependentUpon>202003111659172_populategenreTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
