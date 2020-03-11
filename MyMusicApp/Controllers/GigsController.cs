@@ -29,6 +29,7 @@ namespace MyMusicApp.Controllers
 }
         [Authorize]
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(GigFormViewModel viewModel)
         {
 
