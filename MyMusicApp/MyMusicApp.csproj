@@ -183,9 +183,20 @@
     <Compile Include="Migrations\202003111627080_initial_model.Designer.cs">
       <DependentUpon>202003111627080_initial_model.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003111638124_gigtable.cs" />
+    <Compile Include="Migrations\202003111638124_gigtable.Designer.cs">
+      <DependentUpon>202003111638124_gigtable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003111652393_ovverridegigsandgenreconvention.cs" />
+    <Compile Include="Migrations\202003111652393_ovverridegigsandgenreconvention.Designer.cs">
+      <DependentUpon>202003111652393_ovverridegigsandgenreconvention.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\Gig.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -266,6 +277,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202003111627080_initial_model.resx">
       <DependentUpon>202003111627080_initial_model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003111638124_gigtable.resx">
+      <DependentUpon>202003111638124_gigtable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003111652393_ovverridegigsandgenreconvention.resx">
+      <DependentUpon>202003111652393_ovverridegigsandgenreconvention.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
