@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using MyMusicApp.Models;
+using MyMusicApp.ViewModels;
 
 namespace MyMusicApp.Controllers
 {
@@ -317,6 +318,7 @@ namespace MyMusicApp.Controllers
             }
             return RedirectToAction("VerifyCode", new { Provider = model.SelectedProvider, ReturnUrl = model.ReturnUrl, RememberMe = model.RememberMe });
         }
+
 
         //
         // GET: /Account/ExternalLoginCallback
