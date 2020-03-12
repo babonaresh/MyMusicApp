@@ -7,13 +7,13 @@ namespace MyMusicApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class ovverridegigsandgenreconvention : IMigrationMetadata
+    public sealed partial class populatedata : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ovverridegigsandgenreconvention));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(populatedata));
         
         string IMigrationMetadata.Id
         {
-            get { return "202003111652393_ovverridegigsandgenreconvention"; }
+            get { return "202003120354096_populatedata"; }
         }
         
         string IMigrationMetadata.Source

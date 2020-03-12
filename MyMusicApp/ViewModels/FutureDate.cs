@@ -14,7 +14,7 @@ namespace MyMusicApp.ViewModels
         {
             DateTime dateTime;
             var isvalid=DateTime.TryParseExact(Convert.ToString(value),
-                "d MMM YYYY",
+                "d MMM yyyy",
                 CultureInfo.CurrentCulture,
                 DateTimeStyles.None,
                 out dateTime);

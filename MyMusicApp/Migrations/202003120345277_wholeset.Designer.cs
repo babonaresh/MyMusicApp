@@ -7,13 +7,13 @@ namespace MyMusicApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class initial_model : IMigrationMetadata
+    public sealed partial class wholeset : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(initial_model));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(wholeset));
         
         string IMigrationMetadata.Id
         {
-            get { return "202003111627080_initial_model"; }
+            get { return "202003120345277_wholeset"; }
         }
         
         string IMigrationMetadata.Source

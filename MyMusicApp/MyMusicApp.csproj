@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -163,9 +166,6 @@
     <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
       <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -180,25 +180,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202003111627080_initial_model.cs" />
-    <Compile Include="Migrations\202003111627080_initial_model.Designer.cs">
-      <DependentUpon>202003111627080_initial_model.cs</DependentUpon>
+    <Compile Include="Migrations\202003120345277_wholeset.cs" />
+    <Compile Include="Migrations\202003120345277_wholeset.Designer.cs">
+      <DependentUpon>202003120345277_wholeset.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202003111638124_gigtable.cs" />
-    <Compile Include="Migrations\202003111638124_gigtable.Designer.cs">
-      <DependentUpon>202003111638124_gigtable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003111652393_ovverridegigsandgenreconvention.cs" />
-    <Compile Include="Migrations\202003111652393_ovverridegigsandgenreconvention.Designer.cs">
-      <DependentUpon>202003111652393_ovverridegigsandgenreconvention.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003111659172_populategenreTable.cs" />
-    <Compile Include="Migrations\202003111659172_populategenreTable.Designer.cs">
-      <DependentUpon>202003111659172_populategenreTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003111840217_addingFKtoGig.cs" />
-    <Compile Include="Migrations\202003111840217_addingFKtoGig.Designer.cs">
-      <DependentUpon>202003111840217_addingFKtoGig.cs</DependentUpon>
+    <Compile Include="Migrations\202003120354096_populatedata.cs" />
+    <Compile Include="Migrations\202003120354096_populatedata.Designer.cs">
+      <DependentUpon>202003120354096_populatedata.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -271,9 +259,6 @@
     <Content Include="Views\Gigs\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -287,20 +272,11 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202003111627080_initial_model.resx">
-      <DependentUpon>202003111627080_initial_model.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003120345277_wholeset.resx">
+      <DependentUpon>202003120345277_wholeset.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003111638124_gigtable.resx">
-      <DependentUpon>202003111638124_gigtable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003111652393_ovverridegigsandgenreconvention.resx">
-      <DependentUpon>202003111652393_ovverridegigsandgenreconvention.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003111659172_populategenreTable.resx">
-      <DependentUpon>202003111659172_populategenreTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003111840217_addingFKtoGig.resx">
-      <DependentUpon>202003111840217_addingFKtoGig.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003120354096_populatedata.resx">
+      <DependentUpon>202003120354096_populatedata.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
