@@ -1,11 +1,13 @@
 ﻿
-@model IEnumerable<MyMusicApp.Models.Gig>
+@model MyMusicApp.ViewModels.GigsViewModel
+ 
 @{
     ViewBag.Title = "Home Page";
 }
 
-<ul class="gigs">
-    @foreach(var gig in Model)
+<h1>@Model.Heading</h1>
+<ul class="gigs voffset3">
+    @foreach(var gig in Model.upcomingGigs)
     {
        
     <li>
@@ -19,13 +21,22 @@
         </div>
         <div class="details">
             <span class="artist">
-                @gig.Artist.Name
+                @gig.Artist.Name 
+                @if (Model.ShowActions)
+                {
+                    <button class="btn btn-link btn-sm pull-right js-toggle-follow " data-user-id="@gig.ArtistId">  Following ?</button>
+
+                }
             </span>
             <span class="genre">
                 @gig.Genre.Name
+                
             </span>
             <span> </span>
-            <button data-gig-id="@gig.ID" class="btn btn-default btn-sm pull-right js-toggle-attendance">  Going ?</button>
+            @if (Model.ShowActions)
+            {
+        <span><button data-gig-id="@gig.ID" class="btn btn-default btn-sm pull-right js-toggle-attendance">  Going ?</button></span>
+            }
         </div>
     </li>
 
@@ -45,10 +56,25 @@
                             .removeClass("btn-default")
                             .addClass("btn-info")
                             .text("Going");
-                })
+                    })
                     .fail(function () {
                         alert(" Something went wrong");
+                    });
+            });
+
+       
+
+        
+            $(".js-toggle-follow").click(function (e) {
+                var button = $(e.target);
+                $.post("/api/following", { followeeId: button.attr("data-user-id") })
+                    .done(function () {
+                        button
+                            .text("Following");
                     })
+                    .fail(function () {
+                        alert(" Something went wrong");
+                    });
             });
 
         });

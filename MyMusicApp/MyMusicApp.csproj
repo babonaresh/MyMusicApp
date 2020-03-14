@@ -185,8 +185,14 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AttendancesController.cs" />
+    <Compile Include="Controllers\FollowingController.cs" />
     <Compile Include="Controllers\GigsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Migrations\202003140254377_addingFollowing1.cs" />
+    <Compile Include="Migrations\202003140254377_addingFollowing1.Designer.cs">
+      <DependentUpon>202003140254377_addingFollowing1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\GigsViewModel.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -211,10 +217,15 @@
     <Compile Include="Migrations\202003131927468_addingAttendance1.Designer.cs">
       <DependentUpon>202003131927468_addingAttendance1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003132047549_addingFollowing.cs" />
+    <Compile Include="Migrations\202003132047549_addingFollowing.Designer.cs">
+      <DependentUpon>202003132047549_addingFollowing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Attendance.cs" />
+    <Compile Include="Models\Following.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Gig.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -224,6 +235,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\FutureDate.cs" />
     <Compile Include="ViewModels\GigFormViewModel.cs" />
+    <Compile Include="ViewModels\ValidTime.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\aspnet-MyMusicApp-20200311112104.mdf" />
@@ -264,7 +276,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Gigs.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -316,6 +328,15 @@
     <EmbeddedResource Include="Migrations\202003131927468_addingAttendance1.resx">
       <DependentUpon>202003131927468_addingAttendance1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003132047549_addingFollowing.resx">
+      <DependentUpon>202003132047549_addingFollowing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003140254377_addingFollowing1.resx">
+      <DependentUpon>202003140254377_addingFollowing1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Following\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
