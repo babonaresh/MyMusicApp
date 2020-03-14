@@ -7,13 +7,13 @@ namespace MyMusicApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class addingAttendance : IMigrationMetadata
+    public sealed partial class final : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addingAttendance));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(final));
         
         string IMigrationMetadata.Id
         {
-            get { return "202003131828237_addingAttendance"; }
+            get { return "202003140458400_final"; }
         }
         
         string IMigrationMetadata.Source
